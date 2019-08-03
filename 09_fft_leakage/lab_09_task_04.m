@@ -1,0 +1,41 @@
+clear; close;
+fs=4000;
+N=400;
+n=0:N-1;
+y=10*cos(2*pi*1500*n/fs);
+f=abs(fft(y));
+k=0:N-1;
+df=fs/N;
+kf=k.*df;
+subplot(411);
+stem(kf,f);
+xlabel('Frequency Hz');
+title('Magnitude Spectrum Without Spectral Leakage');
+% If frequency bins are not available (Spectral Leakage) %
+N=50;
+n=0:N-1;
+nfft=1024;
+y=100*cos(2*pi*1500*n/fs);
+f=abs(fft(y,nfft));
+k=0:nfft-1;
+df=fs/nfft;
+kf=k.*df;
+subplot(412);
+plot(kf,f);
+xlabel('Frequency Hz');
+title('Magnitude Spectrum With spectral leakage Leakage');
+ 
+% Solution of Spectral leakage (Windowing)%
+win=window(@hamming,N);
+subplot(413);
+stem(n,win);
+title('Window');
+y_win=y.*win';
+f_win=abs(fft(y_win,nfft));
+k=0:nfft-1;
+df=fs/nfft;
+kf=k.*df;
+subplot(414);
+plot(kf,f_win);
+xlabel('Frequency Hz');
+title('Magnitude Spectrum With Windowing');
