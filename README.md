@@ -12,6 +12,7 @@ The report can be found [here](./MATLAB Aliasing Assignment/ee_16163_bonus_task_
 
 ## Lab Tasks
 Please see the [lab manual](./DSP-16163.pdf) for more details about the following lab tasks.
+
 |Lab Session|Description|
 |----------|------------|
 |01|Introduction to Digital Signal Processing|
