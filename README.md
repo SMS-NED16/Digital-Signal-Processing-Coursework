@@ -8,7 +8,7 @@ rate at which frames were added to the video (sampling frequency) determined whe
 
 I really enjoyed this task because it was the first time I worked with images and videos using MATLAB.
 
-The report can be found [here](./MATLAB Aliasing Assignment/ee_16163_bonus_task_1.pdf).
+The report can be found [here](./MATLAB-Aliasing-Assignment/ee_16163_bonus_task_1.pdf).
 
 ## Lab Tasks
 Please see the [lab manual](./DSP-16163.pdf) for more details about the following lab tasks.
